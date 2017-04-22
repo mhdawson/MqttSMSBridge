@@ -1,0 +1,19 @@
+{
+  "title": "SMS Bridge",
+  "windowSize": { "x": 300, "y": 300 },
+  "serverPort": 14000,
+  "eventLogPrefix": "/home/user1/repo/MqttSMSBridge",
+  "mqtt": [ { "serverUrl": "mqtt:10.1.1.186:1883",
+              "requestTopic": "house/sms" }
+          ],
+  "voipms": { "enabled": true,
+              "user": "XXXXXXXX",
+              "password": "XXXXXX",
+              "did": "XXXXXXXXXX",
+              "dst": "XXXXXXXXXX" },
+  "twilio": { "enabled": false,
+              "accountSID": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+              "accountAuthToken": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+              "toNumber": "XXXXXXXXXXX" ,
+              "fromNumber": "XXXXXXXXXX" }
+}

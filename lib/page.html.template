@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<!--
+Copyright 2016-2017 the project authors as listed in the AUTHORS file.
+All rights reserved. Use of this source code is governed by the
+license that can be found in the LICENSE file.
+-->
+
+<html>
+  <head>
+    <title><DASHBOARD_TITLE></title>
+
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script>
+      var MAX_LOG_LINES = 1000;
+
+      socket = new io.connect('<URL_TYPE>://' + window.location.host);
+
+      var eventLogLines = 0;
+      socket.on('eventLog', function(line) {
+        var eventLog = document.getElementById('logdata');
+        eventLog.innerHTML = line + '<br>' + eventLog.innerHTML;
+        if (eventLogLines > MAX_LOG_LINES) {
+          eventLog.innerHTML = eventLog.innerHTML.substring(0,eventLog.innerHTML.lastIndexOf('<br>'));
+        } else {
+          eventLogLines++;
+        }
+      });
+    </script>
+  </head>
+
+  <body>
+<CONTENT>
+  </body>
+</html>
