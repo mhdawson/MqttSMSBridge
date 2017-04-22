@@ -1,0 +1,32 @@
+{
+  "name": "MqttSMSBridge",
+  "version": "0.0.1",
+  "description": "MQTT to SMS bridge",
+  "main": "lib/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node lib/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mhdawson/MqttSMSBridge.git"
+  },
+  "keywords": [
+    "sms",
+    "micro-app-framework",
+    "micro-app",
+    "mqtt"
+  ],
+  "author": "Michael Dawson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mhdawson/MqttSMSBridge/issues"
+  },
+  "homepage": "https://github.com/mhdawson/MqttSMSBridge#readme",
+  "dependencies": {
+    "micro-app-framework": "^0.1.4",
+    "mqtt": "^2.0.1",
+    "socket.io": "^1.5.0",
+    "twilio": "^2.2.0"
+  }
+}
