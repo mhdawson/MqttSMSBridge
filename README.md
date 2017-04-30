@@ -53,7 +53,8 @@ elements, as well as those supported by the
 * eventLogPrefix - path to the directory into which the log file
   will be written.
 
-An sample configuration file (with the sensitive bits masked):
+For example, this is my configuration file with some key elements
+masked out:
 
 ```json
 {
@@ -75,4 +76,24 @@ An sample configuration file (with the sensitive bits masked):
               "toNumber": "XXXXXXXXXXX" ,
               "fromNumber": "XXXXXXXXXX" }
 }
+```
+
+
+# Installation
+
+The easiest way to install is to run:
+
+```bash
+npm install https://github.com/mhdawson/MqttSMSBridge.git
+```
+
+and then configure the default config.json file in the lib directory as described
+in the configuration section above.
+
+# Running
+
+Simply cd to the directory where the npm was installed and type:
+
+```bash
+npm start
 ```
