@@ -1,7 +1,22 @@
 # MqttSMSBridge
 
 Micro-app server that accepts requests through mqtt
-and then sends out notifications through SMS.
+and then sends out notifications through SMS.  It is currently
+intended to provide personal notifications you configured a
+predefined set of numbers to which notifications will be sent
+when a request is received.
+
+It also provides a simple UI that shows the SMS
+requests that have been serviced:
+
+![sms UI ](https://raw.githubusercontent.com/mhdawson/MqttSMSBridge/master/pictures/smsBridge.png)
+
+To make requests you simply publish the SMS message that you want
+to be sent to the topic on which the bridge is listening.
+
+The bridge does not currenly do any authentication.  I currently
+limit access by controlling access to the mqtt server by securing
+it will `ssl` and requiring certificate based authentication.
 
 # Configuration
 
