@@ -49,12 +49,12 @@ through the mqtt element.  This is an array or one more objects
 with the following elements:
 
 * serverlUrl - url for the mqtt server.  If it is of type
-  mqtts, then certifications must be provided in the certs
-  element:w
+  mqtts, then certificates must be provided through the certs
+  element.
 * requestTopic - topic on which the bridge listens for
   requests.
 * certs - directory which must contain a `ca.cert`, `client.cert`
-  and `client.key` file that will be used to connect to the mqtt
+  and `client.key` file that will be used to connect to the mqtts
   server.
 
 In addition, the bridge supports the following configuration
